@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "io.github.yass-gr.agent-rings",
+  "name": "Agent rings",
+  "version": "1.0.0",
+  "author": "yass-gr",
+  "license": "MIT",
+  "description": "One ring per AI agent on this machine. The green arc is how full the tightest limit window is, and the mark in the middle is that agent.",
+  "kinds": ["bar-widget"],
+  "activation": "on-demand",
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Agent rings",
+    "description": "Stacked rings for every agent Omarchy has a usage record for.",
+    "category": "AI",
+    "allowMultiple": false,
+    "defaultSection": "left",
+    "defaults": {
+      "maxRings": 16
+    },
+    "schema": [
+      {
+        "key": "maxRings",
+        "type": "integer",
+        "label": "Rings on the bar",
+        "min": 1,
+        "max": 24,
+        "step": 1,
+        "defaultValue": 16
+      }
+    ]
+  }
+}
